@@ -7,11 +7,6 @@ const getGames = async () => {
 
     return lines.map((line) => {
       return {
-        game:
-          line
-            .match(/Game [0-9]{1,3}/g)
-            ?.at(0)
-            ?.replace("Game ", "") ?? "N/A",
         turns:
           line
             .split(":")
